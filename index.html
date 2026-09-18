@@ -1,5 +1,3 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -14,13 +12,14 @@ HTML
 </head>
 <body>
 
+<div class="grain"></div>
+
 <!-- PRELOADER -->
 <div id="preloader">
   <div class="drop"></div>
   <p>AquaHope lädt …</p>
 </div>
 
-<!-- SCROLL PROGRESS -->
 <div id="scrollProgress"></div>
 
 <!-- COOKIE BANNER -->
@@ -36,7 +35,6 @@ HTML
   </div>
 </div>
 
-<!-- COOKIE SETTINGS MODAL -->
 <div id="cookieModal" class="modal-overlay">
   <div class="modal-box">
     <h3><i class="fa-solid fa-shield-halved"></i> Cookie-Einstellungen</h3>
@@ -61,37 +59,42 @@ HTML
       <a href="#faq">FAQ</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a href="#spenden" class="btn btn-accent nav-cta">Jetzt spenden</a>
+    <a href="#spenden" class="btn btn-accent nav-cta magnetic">Jetzt spenden</a>
     <button id="burger" aria-label="Menü"><i class="fa-solid fa-bars"></i></button>
   </div>
 </header>
 
 <!-- HERO -->
 <section id="hero">
+  <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
+  <div class="hero-spotlight" id="heroSpotlight"></div>
   <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
   <div class="bubble b4"></div><div class="bubble b5"></div><div class="bubble b6"></div>
   <div class="container hero-inner reveal">
-    <span class="pill"><i class="fa-solid fa-heart"></i> Über 84.600 Menschen bereits geholfen</span>
+    <span class="pill" id="heroPill"><i class="fa-solid fa-rocket"></i> Gerade gestartet – sei von Anfang an dabei</span>
     <h1>Jeder Tropfen<br><span class="gradient-text">verändert ein Leben.</span></h1>
     <p>Wir bauen Brunnen in Regionen, in denen sauberes Wasser keine Selbstverständlichkeit ist. 100 % transparent. Direkt vor Ort. Mit deiner Hilfe.</p>
     <div class="hero-buttons">
-      <a href="#spenden" class="btn btn-accent btn-lg"><i class="fa-solid fa-hand-holding-water"></i> Jetzt spenden</a>
-      <a href="#projekte" class="btn btn-outline btn-lg">Unsere Projekte <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#spenden" class="btn btn-accent btn-lg magnetic"><i class="fa-solid fa-hand-holding-water"></i> Jetzt spenden</a>
+      <a href="#projekte" class="btn btn-outline btn-lg magnetic">Unsere Projekte <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="hero-mini-stats">
-      <div><strong data-count="127">0</strong><span>Brunnen gebaut</span></div>
-      <div><strong data-count="84600">0</strong><span>Menschen versorgt</span></div>
-      <div><strong data-count="12">0</strong><span>Länder</span></div>
+      <div><strong class="counter" data-target="0">0</strong><span>Brunnen gebaut</span></div>
+      <div><strong class="counter" data-target="0">0</strong><span>Menschen versorgt</span></div>
+      <div><strong class="counter" data-target="0">0</strong><span>Länder aktiv</span></div>
     </div>
   </div>
   <div class="scroll-down"><i class="fa-solid fa-chevron-down"></i></div>
 </section>
 
-<!-- TRUST BAR -->
+<!-- TRUST BAR (Marquee) -->
 <section class="trust-bar reveal">
   <div class="container">
-    <p>Vertraut & unterstützt von</p>
-    <div class="trust-logos">
+    <p>Unsere geplanten Umsetzungspartner</p>
+  </div>
+  <div class="trust-marquee">
+    <div class="trust-track">
+      <span>WaterAid Partner</span><span>Global Relief</span><span>UNICEF Netzwerk</span><span>Care4Africa</span><span>SchoolAid</span>
       <span>WaterAid Partner</span><span>Global Relief</span><span>UNICEF Netzwerk</span><span>Care4Africa</span><span>SchoolAid</span>
     </div>
   </div>
@@ -100,7 +103,7 @@ HTML
 <!-- ÜBER UNS -->
 <section id="ueber-uns" class="section">
   <div class="container two-col">
-    <div class="col-img reveal-left">
+    <div class="col-img reveal-left tilt">
       <img src="https://picsum.photos/seed/aquahope1/600/700" alt="Kinder an einem neuen Brunnen">
       <div class="floating-card"><i class="fa-solid fa-circle-check"></i><div><strong>100%</strong><span>Transparenz garantiert</span></div></div>
     </div>
@@ -114,7 +117,7 @@ HTML
         <li><i class="fa-solid fa-circle-check"></i> Spendenquittung für steuerliche Absetzbarkeit</li>
         <li><i class="fa-solid fa-circle-check"></i> Nachhaltige Wartung durch Dorfgemeinschaften</li>
       </ul>
-      <a href="#spenden" class="btn btn-primary">Werde Teil der Bewegung</a>
+      <a href="#spenden" class="btn btn-primary magnetic">Werde Teil der Bewegung</a>
     </div>
   </div>
 </section>
@@ -123,24 +126,30 @@ HTML
 <section class="stats-section">
   <div class="wave-top"></div>
   <div class="container stats-grid">
-    <div class="stat-box reveal"><i class="fa-solid fa-faucet-drip"></i><strong class="counter" data-target="127">0</strong><span>Brunnen gebaut</span></div>
-    <div class="stat-box reveal"><i class="fa-solid fa-users"></i><strong class="counter" data-target="84600">0</strong><span>Menschen versorgt</span></div>
-    <div class="stat-box reveal"><i class="fa-solid fa-earth-africa"></i><strong class="counter" data-target="12">0</strong><span>Länder aktiv</span></div>
-    <div class="stat-box reveal"><i class="fa-solid fa-euro-sign"></i><strong class="counter" data-target="1240000">0</strong><span>€ Spendenvolumen</span></div>
+    <div class="stat-box reveal tilt"><i class="fa-solid fa-faucet-drip"></i><strong class="counter" data-target="0" data-key="wells">0</strong><span>Brunnen gebaut</span></div>
+    <div class="stat-box reveal tilt"><i class="fa-solid fa-users"></i><strong class="counter" data-target="0" data-key="people">0</strong><span>Menschen versorgt</span></div>
+    <div class="stat-box reveal tilt"><i class="fa-solid fa-earth-africa"></i><strong class="counter" data-target="0" data-key="countries">0</strong><span>Länder aktiv</span></div>
+    <div class="stat-box reveal tilt"><i class="fa-solid fa-euro-sign"></i><strong class="counter" data-target="0" data-key="donated">0</strong><span>€ Spendenvolumen</span></div>
   </div>
 </section>
 
-<!-- SPENDENUHR / AKTUELLES PROJEKT -->
+<!-- SPENDENUHR -->
 <section id="spendenuhr" class="section dark-section">
   <div class="container">
     <div class="section-head reveal">
       <span class="tag light">Live · Aktuelles Projekt</span>
       <h2>Brunnenbau in Turkana, Kenia</h2>
-      <p>Verfolge live, wie nah wir dem nächsten Brunnen sind – jede Spende zählt in Echtzeit.</p>
+      <p>Verfolge live, wie nah wir dem nächsten Brunnen sind – jede Spende zählt sofort.</p>
     </div>
     <div class="clock-grid">
       <div class="progress-ring-wrap reveal-left">
         <svg viewBox="0 0 220 220" class="ring-svg">
+          <defs>
+            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF8C42"/>
+              <stop offset="100%" stop-color="#00B4D8"/>
+            </linearGradient>
+          </defs>
           <circle cx="110" cy="110" r="95" class="ring-bg"></circle>
           <circle cx="110" cy="110" r="95" class="ring-fill" id="progressRing"></circle>
         </svg>
@@ -152,15 +161,17 @@ HTML
       <div class="clock-info reveal-right">
         <div class="amount-row">
           <div><span>Gesammelt</span><strong id="currentAmount">0 €</strong></div>
-          <div><span>Ziel</span><strong id="goalAmount">8.500 €</strong></div>
-          <div><span>Es fehlen noch</span><strong id="remainingAmount" class="accent-text">0 €</strong></div>
+          <div><span>Ziel pro Brunnen</span><strong id="goalAmount">8.500 €</strong></div>
+          <div><span>Es fehlen noch</span><strong id="remainingAmount" class="accent-text">8.500 €</strong></div>
         </div>
         <div class="progress-bar-outer"><div class="progress-bar-inner" id="progressBarInner"></div></div>
-        <a href="#spenden" class="btn btn-accent btn-lg" id="supportThisProject">Diesen Brunnen unterstützen <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#spenden" class="btn btn-accent btn-lg magnetic" id="supportThisProject">Diesen Brunnen unterstützen <i class="fa-solid fa-arrow-right"></i></a>
 
         <div class="live-feed-box">
           <h4><i class="fa-solid fa-tower-broadcast"></i> Live-Spenden</h4>
-          <ul id="liveFeedList"></ul>
+          <ul id="liveFeedList">
+            <li class="empty-feed">Sei die/der Erste, die/der spendet! 💧</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -177,69 +188,69 @@ HTML
     <button class="slider-arrow left" id="projPrev"><i class="fa-solid fa-chevron-left"></i></button>
     <div class="slider-track" id="projectSlider">
 
-      <div class="project-card" data-project="Kenia" data-goal="8500" data-current="6175">
-        <img src="https://picsum.photos/seed/kenia/500/350" alt="Brunnenprojekt Kenia">
+      <div class="project-card tilt" data-project="Kenia">
+        <div class="pc-img-wrap"><img src="https://picsum.photos/seed/kenia/500/350" alt="Brunnenprojekt Kenia"></div>
         <div class="pc-body">
           <span class="flag">🇰🇪 Kenia</span>
           <h3>Turkana-Region</h3>
           <p>Versorgung von 3 Dörfern mit sauberem Wasser.</p>
-          <div class="mini-progress"><div style="width:72%"></div></div>
-          <div class="pc-foot"><span>72% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
+          <div class="mini-progress"><div style="width:0%"></div></div>
+          <div class="pc-foot"><span class="pc-percent">0% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
         </div>
       </div>
 
-      <div class="project-card" data-project="Äthiopien" data-goal="9200" data-current="3128">
-        <img src="https://picsum.photos/seed/ethiopia/500/350" alt="Brunnenprojekt Äthiopien">
+      <div class="project-card tilt" data-project="Äthiopien">
+        <div class="pc-img-wrap"><img src="https://picsum.photos/seed/ethiopia/500/350" alt="Brunnenprojekt Äthiopien"></div>
         <div class="pc-body">
           <span class="flag">🇪🇹 Äthiopien</span>
           <h3>Oromia-Region</h3>
           <p>Neuer Tiefbrunnen für eine Schule mit 400 Kindern.</p>
-          <div class="mini-progress"><div style="width:34%"></div></div>
-          <div class="pc-foot"><span>34% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
+          <div class="mini-progress"><div style="width:0%"></div></div>
+          <div class="pc-foot"><span class="pc-percent">0% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
         </div>
       </div>
 
-      <div class="project-card" data-project="Malawi" data-goal="7300" data-current="6570">
-        <img src="https://picsum.photos/seed/malawi/500/350" alt="Brunnenprojekt Malawi">
+      <div class="project-card tilt" data-project="Malawi">
+        <div class="pc-img-wrap"><img src="https://picsum.photos/seed/malawi/500/350" alt="Brunnenprojekt Malawi"></div>
         <div class="pc-body">
           <span class="flag">🇲🇼 Malawi</span>
           <h3>Lilongwe Umland</h3>
           <p>Reparatur & Modernisierung von 2 alten Brunnen.</p>
-          <div class="mini-progress"><div style="width:90%"></div></div>
-          <div class="pc-foot"><span>90% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
+          <div class="mini-progress"><div style="width:0%"></div></div>
+          <div class="pc-foot"><span class="pc-percent">0% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
         </div>
       </div>
 
-      <div class="project-card" data-project="Tansania" data-goal="8900" data-current="1780">
-        <img src="https://picsum.photos/seed/tansania/500/350" alt="Brunnenprojekt Tansania">
+      <div class="project-card tilt" data-project="Tansania">
+        <div class="pc-img-wrap"><img src="https://picsum.photos/seed/tansania/500/350" alt="Brunnenprojekt Tansania"></div>
         <div class="pc-body">
           <span class="flag">🇹🇿 Tansania</span>
           <h3>Dodoma-Region</h3>
           <p>Erster Brunnen für eine abgelegene Gemeinde.</p>
-          <div class="mini-progress"><div style="width:20%"></div></div>
-          <div class="pc-foot"><span>20% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
+          <div class="mini-progress"><div style="width:0%"></div></div>
+          <div class="pc-foot"><span class="pc-percent">0% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
         </div>
       </div>
 
-      <div class="project-card" data-project="Indien" data-goal="6600" data-current="4290">
-        <img src="https://picsum.photos/seed/india/500/350" alt="Brunnenprojekt Indien">
+      <div class="project-card tilt" data-project="Indien">
+        <div class="pc-img-wrap"><img src="https://picsum.photos/seed/india/500/350" alt="Brunnenprojekt Indien"></div>
         <div class="pc-body">
           <span class="flag">🇮🇳 Indien</span>
           <h3>Rajasthan</h3>
           <p>Wasseraufbereitungsanlage für 5 Dörfer.</p>
-          <div class="mini-progress"><div style="width:65%"></div></div>
-          <div class="pc-foot"><span>65% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
+          <div class="mini-progress"><div style="width:0%"></div></div>
+          <div class="pc-foot"><span class="pc-percent">0% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
         </div>
       </div>
 
-      <div class="project-card" data-project="Uganda" data-goal="7800" data-current="7020">
-        <img src="https://picsum.photos/seed/uganda/500/350" alt="Brunnenprojekt Uganda">
+      <div class="project-card tilt" data-project="Uganda">
+        <div class="pc-img-wrap"><img src="https://picsum.photos/seed/uganda/500/350" alt="Brunnenprojekt Uganda"></div>
         <div class="pc-body">
           <span class="flag">🇺🇬 Uganda</span>
           <h3>Karamoja-Region</h3>
           <p>Solarbetriebene Wasserpumpe für 1200 Menschen.</p>
-          <div class="mini-progress"><div style="width:90%"></div></div>
-          <div class="pc-foot"><span>90% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
+          <div class="mini-progress"><div style="width:0%"></div></div>
+          <div class="pc-foot"><span class="pc-percent">0% finanziert</span><button class="btn btn-primary-small choose-project">Unterstützen</button></div>
         </div>
       </div>
 
@@ -255,9 +266,9 @@ HTML
     <h2>In 3 Schritten zum eigenen Impact</h2>
   </div>
   <div class="container steps-grid">
-    <div class="step-box reveal"><div class="step-num">1</div><i class="fa-solid fa-hand-holding-heart"></i><h3>Betrag & Projekt wählen</h3><p>Entscheide, wie viel du geben möchtest und welches Land du unterstützt.</p></div>
-    <div class="step-box reveal"><div class="step-num">2</div><i class="fa-solid fa-lock"></i><h3>Sicher bezahlen</h3><p>Bezahle bequem per PayPal, Kreditkarte, Apple/Google Pay oder SEPA.</p></div>
-    <div class="step-box reveal"><div class="step-num">3</div><i class="fa-solid fa-chart-line"></i><h3>Fortschritt verfolgen</h3><p>Erhalte Updates, Fotos und einen transparenten Bericht zum Projekt.</p></div>
+    <div class="step-box reveal tilt"><div class="step-num">1</div><i class="fa-solid fa-hand-holding-heart"></i><h3>Betrag & Projekt wählen</h3><p>Entscheide, wie viel du geben möchtest und welches Land du unterstützt.</p></div>
+    <div class="step-box reveal tilt"><div class="step-num">2</div><i class="fa-solid fa-lock"></i><h3>Sicher bezahlen</h3><p>Bezahle bequem per PayPal, Kreditkarte, Apple/Google Pay oder SEPA.</p></div>
+    <div class="step-box reveal tilt"><div class="step-num">3</div><i class="fa-solid fa-chart-line"></i><h3>Fortschritt verfolgen</h3><p>Erhalte Updates, Fotos und einen transparenten Bericht zum Projekt.</p></div>
   </div>
 </section>
 
@@ -322,8 +333,8 @@ HTML
         <div class="form-step">
           <label class="form-label">5. Deine Daten</label>
           <div class="form-grid-2">
-            <input type="text" placeholder="Vorname" required>
-            <input type="text" placeholder="Nachname" required>
+            <input type="text" id="donorFirstname" placeholder="Vorname" required>
+            <input type="text" id="donorLastname" placeholder="Nachname" required>
           </div>
           <input type="email" placeholder="E-Mail-Adresse" required class="full">
           <input type="text" placeholder="Adresse (für Spendenquittung, optional)" class="full">
@@ -346,7 +357,7 @@ HTML
           <div><span>Projekt</span><strong id="summaryProject">Allgemeiner Wasserfonds</strong></div>
         </div>
 
-        <button type="submit" id="donateSubmitBtn" class="btn btn-accent btn-lg full" disabled>
+        <button type="submit" id="donateSubmitBtn" class="btn btn-accent btn-lg full magnetic" disabled>
           <i class="fa-solid fa-lock"></i> Jetzt sicher spenden
         </button>
         <p class="secure-note"><i class="fa-solid fa-shield-halved"></i> 256-Bit SSL-verschlüsselt · Deine Daten sind sicher</p>
@@ -361,32 +372,36 @@ HTML
     <i class="fa-solid fa-circle-check success-icon"></i>
     <h3>Vielen herzlichen Dank!</h3>
     <p id="successText">Deine Spende hilft direkt vor Ort.</p>
-    <button class="btn btn-primary" id="closeSuccessModal">Schließen</button>
+    <div class="impact-box" id="impactBox"></div>
+    <button class="btn btn-primary magnetic" id="closeSuccessModal">Schließen</button>
   </div>
 </div>
 
 <!-- TESTIMONIALS -->
 <section class="section testi-section">
   <div class="section-head center reveal">
-    <span class="tag">Erfolgsgeschichten</span>
-    <h2>Was unsere Unterstützung bewirkt</h2>
+    <span class="tag">Stimmen aus der Community</span>
+    <h2>Warum Menschen uns unterstützen</h2>
   </div>
   <div class="testi-slider reveal">
     <div class="testi-track" id="testiTrack">
       <div class="testi-card">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
         <img src="https://picsum.photos/seed/person1/100/100" alt="Spenderin">
-        <p>"Ich spende seit einem Jahr monatlich und bekomme regelmäßig Fotos vom Fortschritt. Endlich eine Organisation, die wirklich transparent ist."</p>
-        <strong>– Lena M., Spenderin</strong>
+        <p>"Endlich ein Projekt, bei dem ich live sehe, wie nah wir am nächsten Brunnen sind. Das motiviert total mitzumachen."</p>
+        <strong>– Lena M., Unterstützerin</strong>
       </div>
       <div class="testi-card">
-        <img src="https://picsum.photos/seed/person2/100/100" alt="Dorfbewohner">
-        <p>"Vorher mussten unsere Kinder 6 km zur nächsten Wasserstelle laufen. Jetzt haben wir einen Brunnen direkt im Dorf."</p>
-        <strong>– Amina K., Turkana, Kenia</strong>
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <img src="https://picsum.photos/seed/person2/100/100" alt="Unterstützer">
+        <p>"Die Idee mit der Spendenuhr ist genial – man sieht sofort den Effekt der eigenen Spende. Sehr transparent."</p>
+        <strong>– Jonas R., Unterstützer</strong>
       </div>
       <div class="testi-card">
-        <img src="https://picsum.photos/seed/person3/100/100" alt="Spender">
-        <p>"Die Spendenuhr hat mich überzeugt – man sieht live, wie nah ein Projekt an der Fertigstellung ist. Sehr motivierend."</p>
-        <strong>– Jonas R., Spender</strong>
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <img src="https://picsum.photos/seed/person3/100/100" alt="Unterstützerin">
+        <p>"Als Schulprojekt gestartet, aber mit einem Ziel, das wirklich zählt. Ich bin gespannt auf den ersten fertigen Brunnen!"</p>
+        <strong>– Amina K., Unterstützerin</strong>
       </div>
     </div>
     <div class="testi-dots" id="testiDots"></div>
@@ -423,7 +438,7 @@ HTML
   </div>
 </section>
 
-<!-- NEWSLETTER CTA -->
+<!-- NEWSLETTER -->
 <section class="newsletter-section reveal">
   <div class="container newsletter-inner">
     <div>
@@ -432,7 +447,7 @@ HTML
     </div>
     <form class="newsletter-form" id="newsletterForm">
       <input type="email" placeholder="Deine E-Mail-Adresse" required>
-      <button type="submit" class="btn btn-accent">Anmelden</button>
+      <button type="submit" class="btn btn-accent magnetic">Anmelden</button>
     </form>
   </div>
 </section>
@@ -474,7 +489,7 @@ HTML
     <div class="payment-icons">
       <i class="fa-brands fa-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-apple-pay"></i><i class="fa-brands fa-google-pay"></i>
     </div>
-    <p>© 2025 AquaHope. Alle Rechte vorbehalten.</p>
+    <p>© 2025 AquaHope. Alle Rechte vorbehalten. · <a href="#" id="resetDemo">Demo-Daten zurücksetzen</a></p>
   </div>
 </footer>
 
