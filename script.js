@@ -132,7 +132,13 @@ function renderAll() {
 
 /* ============ DONATION SUBMIT ============ */
 function addDonation(amount, projectKey, donorName) {
-  if (!state.projects[projectKey]) projectKey = 'Allgemein';
+  // Spenden an den "Allgemeinen Wasserfonds" fließen automatisch
+  // in das aktuell hervorgehobene Projekt (Spendenuhr oben) –
+  // dorthin, wo das Geld gerade am dringendsten gebraucht wird.
+  if (projectKey === 'Allgemein' || !state.projects[projectKey]) {
+    projectKey = state.featuredProject;
+  }
+
   const before = state.projects[projectKey];
   const beforeWellsForProject = Math.floor(before.current / before.goal);
 
